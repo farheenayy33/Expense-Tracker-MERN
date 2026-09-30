@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "https://expense-tracker-mern-eight-xi.vercel.app/api/auth";
-const addIncome = async (data) => {
+const BASE_URL =
+  "https://expense-tracker-mern-eight-xi.vercel.app/api/transaction";
+  
+  const addIncome = async (data) => {
   const response = await axios.post(`${BASE_URL}/income`, data);
   return response.data;
 };

@@ -401,7 +401,7 @@ const DashboardPage = () => {
                           balance < 0 ? "text-[#FF9275]" : ""
                         }`}
                       >
-                        Rs. {formatAmount(balance)}
+                        {isLoading ? "..." : `Rs. ${formatAmount(balance)}`}
                       </h2>
 
                       <p className="mt-3 text-sm text-white/50">
@@ -446,7 +446,7 @@ const DashboardPage = () => {
                       <p className="text-sm text-[#777285]">Total Income</p>
 
                       <p className="mt-2 text-2xl font-bold">
-                        Rs. {formatAmount(totalIncome)}
+                        {isLoading ? "..." : `Rs. ${formatAmount(totalIncome)}`}
                       </p>
                     </div>
 
@@ -472,7 +472,9 @@ const DashboardPage = () => {
                       <p className="text-sm text-[#777285]">Total Expenses</p>
 
                       <p className="mt-2 text-2xl font-bold">
-                        Rs. {formatAmount(totalExpense)}
+                        {isLoading
+                          ? "..."
+                          : `Rs. ${formatAmount(totalExpense)}`}
                       </p>
                     </div>
 
@@ -498,7 +500,7 @@ const DashboardPage = () => {
                       <p className="text-sm text-[#777285]">Savings</p>
 
                       <p className="mt-2 text-2xl font-bold">
-                        Rs. {formatAmount(savings)}
+                        {isLoading ? "..." : `Rs. ${formatAmount(savings)}`}
                       </p>
                     </div>
 

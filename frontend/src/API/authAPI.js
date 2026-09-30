@@ -1,6 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:5000/api/auth";
-const registerUser = async (data) => {
+const BASE_URL = "https://expense-tracker-mern-eight-xi.vercel.app/api/auth";const registerUser = async (data) => {
   const response = await axios.post(`${BASE_URL}/register`, data);
   return response.data;
 };
